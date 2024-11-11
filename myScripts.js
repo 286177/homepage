@@ -49,3 +49,4 @@ function showCalculator(){
        showCalc = false;
    }
 }
+
