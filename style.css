@@ -44,7 +44,37 @@ form{
    font-family: "Patrick Hand", serif;
    color: white;
   border-radius: 4px;
+  cursor: pointer;
 }
+
+@keyframes submit-button {
+	25% {
+		transform: scale(1.1);
+	}
+
+	75% {
+		transform: scale(.9);
+	}
+}
+
+.submit-button {
+	display: inline-block;
+
+	@include hideTapHighlightColor();
+	@include hardwareAccel();
+	@include improveAntiAlias();
+
+	&:hover {
+		animation-name: submit-button;
+		animation-duration: 1s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+	}
+}
+
+
+
+
 
 
 
